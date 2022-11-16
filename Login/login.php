@@ -24,8 +24,4 @@ else if(empty($password)) {
     header("Location: index.php?erro=User Password is required");
 }
 
-
-
-
-
-?>
+$sql = "SELECT * FROM Login WHERE Email= 'email' AND Password='password'";
