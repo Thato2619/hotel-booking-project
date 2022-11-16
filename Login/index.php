@@ -18,7 +18,8 @@
             <input type="email" name="email" placeholder="Email address"> <br>
             <label>Password</label>
             <input type="password" name="password" placeholder="Password">
-            
+
+            <button type="submit">LOGIN</button>
     </form>
 </body>
 </html>
