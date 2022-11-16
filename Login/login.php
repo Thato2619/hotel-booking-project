@@ -35,7 +35,7 @@ if(mysqli_num_rows($results) === 1 ) {
         $_SESSION['Login_id'] = $row['id'];
         $_SESSION['Email'] = $row['Email'];
         $_SESSION['Password'] = $row['password'];
-        header("Location: home.php");
+        header("Location: homePage.php");
         exit();
     }
     else{
