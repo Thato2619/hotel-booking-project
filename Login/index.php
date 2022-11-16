@@ -15,9 +15,9 @@
             <p class="error"> <?php echo $_GET['error']; ?></p>
             <?php } ?>
             <label>Email: </label>
-            <input type="email" name="email" placeholder="Email address"> <br>
+            <input type="email" name="email" placeholder="Email address" required> <br>
             <label>Password</label>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password" required>
 
             <button type="submit">LOGIN</button>
     </form>
