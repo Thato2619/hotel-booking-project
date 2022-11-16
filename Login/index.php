@@ -9,7 +9,16 @@
 <body>
     <form action="login.php" method="post">
         <h1>LOGIN</h1>
-
+        <!-- add error message in php tags -->
+        <?php 
+            if(isset($_GET['error'])) {?>
+            <p class="error"> <?php echo $_GET['error']; ?></p>
+            <?php } ?>
+            <label>Email: </label>
+            <input type="email" name="email" placeholder="Email address"> <br>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password">
+            
     </form>
 </body>
 </html>
