@@ -17,7 +17,12 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
 $email = validate($_POST['email']);
 $password = validate($_POST['password']);
 
-
+if(empty($email)) {
+    header("Location: index.php?erro=User Name is required"); 
+}
+else if(empty($password)) {
+    header("Location: index.php?erro=User Password is required");
+}
 
 
 
