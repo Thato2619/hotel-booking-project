@@ -25,3 +25,28 @@ else if(empty($password)) {
 }
 
 $sql = "SELECT * FROM Login WHERE Email= 'email' AND Password='password'";
+
+$results = mysqli_query($conn, $sql);
+
+if(mysqli_num_rows($results) === 1 ) {
+    $row = mysqli_fetch_assoc($results);
+    if($row['Email'] === 'email' && $row['password'] === 'password'){
+        echo "Logged In!!";
+        $_SESSION['Login_id'] = $row['id'];
+        $_SESSION['Email'] = $row['Email'];
+        $_SESSION['Password'] = $row['password'];
+        header("Location: home.php");
+        exit();
+    }
+    else{
+        header("Location: registration.php");
+        exit();
+    }
+
+    
+
+}
+else{
+    header("Location: registration.php");
+    exit();
+}
